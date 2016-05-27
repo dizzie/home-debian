@@ -1,0 +1,18 @@
+out_to_x no
+out_to_console yes
+short_units yes
+update_interval 1
+ 
+TEXT
+ 
+[\
+# Net:
+{"full_text":"Net","color":"\#A0A0A0","separator":false,"separator_block_width":6},\
+{"full_text":"↓↓ ${downspeedf eth0} ↑↑ ${upspeedf eth0}","color":"\#FFFFFF","separator":false,"separator_block_width":6},\
+# IP:
+{"full_text":"IP","color":"\#A0A0A0","separator":false,"separator_block_width":6},\
+{"full_text":"${addr eth0}","color":"\#FFFFFF","separator":false,"separator_block_width":6},\
+# Kernel:
+{"full_text":"Kernel","color":"\#A0A0A0","separator":false,"separator_block_width":6},\
+{"full_text":"${kernel}","color":"\#FFFFFF","separator":false,"separator_block_width":6}\
+],
