@@ -1,1 +1,82 @@
-/home/dizzie/.Xdefaults
+! This is my 'ultimate' .Xdefaults. Maybe not so ultimate for you though :)
+! Terminal suggestion : Rxvt-unicode, xterm, maybe others too. I only use rxvt
+!
+! May 27 2016, by dizzie 
+
+! FONT !
+URxvt*.font: xft:AnonymousPro:style=Medium:hinting=true:pixelsize=18
+
+! TRANSPARENCY !!
+URxvt*inheritPixmap:            true
+URxvt*tintColor:                white
+URxvt*shading:                  20
+! The higher the number, the lighter (20 is pretty dark)
+URxvt*transparent:              true 
+
+! Perl Plugins 
+! Instructions here:            https://github.com/muennich/urxvt-perls
+  URxvt*.perl-ext-common:       default,url-select,keyboard-select,clipboard
+! fix copy-paste
+  URxvt*.keysym.M-c:            perl:clipboard:copy
+  URxvt*.keysym.M-v:            perl:clipboard:paste
+  URxvt*.keysym.M-C-v:          perl:clipboard:paste_escaped
+! using xclipboard
+  URxvt*.clipboard.copycmd:     xclip -i -selection clipboard
+  URxvt*.clipboard.pastecmd:    xclip -o -selection clipboard
+! allow urls to be selected by keyboard
+  URxvt*.keysym.M-Escape:       perl:keyboard-select:activate
+  URxvt*.keysym.M-u:            perl:url-select:select_next
+  URxvt*.keysym.M-s:            perl:keyboard-select:search
+! clickable URLs  (uncomment for the browser you use)
+  URxvt*.url-select.underline:  true
+  URxvt*.url-select.launcher:   /usr/bin/google-chrome-stable
+  
+  URxvt*.url-select.button:     1
+  URxvt*.colorUL:               #dc322f
+
+! Bars and borders
+URxvt*.scrollBar:	            false
+URxvt*.internalBorder:          5
+URxvt*.cursorBlink:             true
+URxvt*.termName:                rxvt-256color
+! Set terminal name here
+URxvt*.saveLines:               1500
+URxvt*.urgentOnBell:            true
+! set to false for no 'terminal beep'
+
+! COLORS !
+*cursorColor:                   #93a1a1
+*background:                    #002b36
+*foreground:                    #839496
+
+! black dark/light
+*color0:                        #073642
+*color8:                        #002b36
+  
+! red dark/light
+*color1:                        #dc322f
+*color9:                        #cb4b16
+
+! green dark/light
+*color2:                        #859900
+*color10:                       #586e75
+
+! yellow dark/light
+*color3:                        #b58900
+*color11:                       #657b83
+
+! blue dark/light
+*color4:                        #268bd2
+*color12:                       #839496
+
+! magenta dark/light
+*color5:                        #d33682
+*color13:                       #6c71c4
+
+! cyan dark/light
+*color6:                        #2aa198
+*color14:                       #586e75
+
+! white dark/light
+*color7:                        #eee8d5
+*color15:                       #fdf6e3
